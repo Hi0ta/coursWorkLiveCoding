@@ -1,15 +1,13 @@
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
-
         Password pass = new Password("123456789");
         try {
             pass.checkPassword();
         } catch (WrongPasswordException e) {
             System.out.println(e);
         }
-     //   System.out.println(pass);
+        System.out.println(pass);
         List<String> book = new ArrayList<>();//создаем список книг
         book.add("dbook");
         book.add("cbook");
@@ -39,9 +37,7 @@ public class Main {
         book.add("sbook");
         System.out.println(book); // смотрим что они в хаотичном порядке изначально
         System.out.println();
-
         System.out.println(putBookInShelf(book)); //получаем упорядоченный стеллаж из 5ти полок
-
     }
     public static List<ArrayList<String>> putBookInShelf(List<String> book){ // получаем на вход список названий книг
         Collections.sort(book);   //сортируем по афавиту
@@ -61,7 +57,6 @@ public class Main {
             }
             shelfInd++;
         }
-
         return rack; //возвращаем разложенные книги по полкам на стеллаже
  }
     public static int getBooksPerShelf(int book, int shelf) { //считаем сколько книг нужно положить на полку
