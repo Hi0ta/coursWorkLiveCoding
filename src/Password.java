@@ -13,10 +13,10 @@ public class Password {
         this.enterPassword = enterPassword;
     }
 
-//    @Override
-//    public String toString() {
-//        return "пароль: " + enterPassword;
-//    }
+    @Override
+    public String toString() {
+        return "пароль: " + enterPassword;
+    }
 
     public void checkPassword() throws WrongPasswordException {
         if (enterPassword.length() != 9) {
